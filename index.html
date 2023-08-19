@@ -16,50 +16,29 @@
             <div class="bg-[#2fb5f3e9] py-14">
                 <h1 class="uppercase text-4xl font-semibold text-center text-white mb-8">ToDo List</h1>
                 <div class="flex justify-center w-[60%] mx-auto">
-                    <input class="flex-1 rounded-lg py-3 px-5" type="text" placeholder="Type your input...">
-                    <button class="ml-5 px-5 btn text-gray-500 bg-white">Add</button>
+                    <input id="input-todo" class="flex-1 rounded-lg py-3 px-5" type="text" placeholder="Type your input...">
+                    <button id="btn-add" class="ml-5 px-5 btn text-gray-500 bg-white">Add</button>
                 </div>
             </div>
             <!-- Start Task List Viewer -->
             <div class="border border-gray-400">
                 <h2 class="uppercase text-2xl pt-8 text-center font-semibold">List of works todo:</h2>
-                <div class="bg-white p-8">
-                    <!-- row 1 -->
-                    <div class="bg-gray-100 text-gray-600 flex justify-between items-center px-8 rounded-lg mb-4">
-                        <div class="flex">
-                            <h4 class="mr-6">1#</h4>
-                            <h3 class="text-gray-800">Shopping</h3>
-                        </div>
-                        <div>
-                            <button onclick="my_modal.showModal()" class="btn btn-ghost text-green-500">Edit</button>
-                            <button class="btn btn-ghost text-red-600">X</button>
-                        </div>
-                    </div>
-                    <!-- row 2 -->
-                    <div class="bg-gray-100 text-gray-600 flex justify-between items-center px-8 rounded-lg">
-                        <div class="flex">
-                            <h4 class="mr-6">2#</h4>
-                            <h3 class="text-gray-800">Shopping</h3>
-                        </div>
-                        <div>
-                            <button onclick="my_modal.showModal()" class="btn btn-ghost text-green-500">Edit</button>
-                            <button class="btn btn-ghost text-red-600">X</button>
-                        </div>
-                    </div>
+                <div id="parent-of-row" class="bg-white p-8">
+                    <!-- row -->
                 </div>
             </div>
             <!-- End Task List Viewer -->
 
             <!-- Start update Task Viewer -->
-            <div class="flex flex-col py-8 bg-gray-600 rounded-lg">
+            <div id="viewer-id" class="flex flex-col py-8 bg-gray-600 rounded-lg hidden">
                 <div class="mb-6">
                     <h2 class="uppercase text-3xl text-white font-semibold text-center">Edit Your todo</h2>
                 </div>
                 <div class="flex flex-col px-16">
-                    <input class="rounded-lg py-2 px-4" type="text" placeholder="Type new task...">
+                    <input id="input-update" class="rounded-lg py-2 px-4" type="text" placeholder="Type new task...">
                     <div class="mx-auto mt-3">
-                        <button class="btn btn-info mr-3">Update</button>
-                        <button class="btn btn-error">Cancel</button>
+                        <button id="btn-update" class="btn btn-info mr-3">Update</button>
+                        <button id="btn-cancel" class="btn btn-error">Cancel</button>
                     </div>
                 </div>
             </div>
@@ -67,6 +46,10 @@
         </div>
 
     </main>
+
+
+    <script src="./js/util.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
